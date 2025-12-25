@@ -152,10 +152,12 @@ server <- function(input, output, session) {
       base <- base + geom_smooth(se = TRUE, method = "loess", span = 0.5)
     } else if (input$smooth == "roll") {
       k <- input$k
-      d$roll <- as.numeric(roll_mean(d$min_extent_million_km2, k = k))
-      base <- base + geom_line(aes(y = roll), linewidth = 1)
-    }
+      d2 <- d
+      d2$roll <- as.numeric(roll_mean(d2$min_extent_million_km2, k = k))
 
+      base <- base +
+        geom_line(data = d2, aes(x = year, y = roll), linewidth = 1)
+    }
     # marker valgt år
     y <- as.integer(input$pick_year)
     row <- d[d$year == y, ]
