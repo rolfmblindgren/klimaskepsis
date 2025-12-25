@@ -209,6 +209,7 @@ server <- function(input, output, session) {
     base <- ggplot(d, aes(x = year, y = min_extent_million_km2)) +
       geom_line() +
       geom_point() +
+      scale_y_continuous(limits = c(0, NA)) +
       labs(x = NULL, y = "Minimum extent (mill. km²)")
 
     if (input$smooth == "loess") {
