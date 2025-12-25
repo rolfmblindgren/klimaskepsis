@@ -159,7 +159,15 @@ ui <- fluidPage(
                  tags$li("Kortere tidsvinduer kan gi inntrykk av «pause» i trender."),
                  tags$li("Langsiktige vurderinger krever flere tiår med data.")
                )
-        )
+        ),
+        tabPanel (
+          "Jammen hva med for to hundre og femti millioner år siden da?",
+          includeMarkdown("geologisk_tidsargument.md")
+
+
+
+
+          )
       )
     )
 
