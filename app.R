@@ -63,7 +63,7 @@ roll_mean <- function(x, k = 5) {
   stats::filter(x, rep(1 / k, k), sides = 2)
 }
 
-                                        ## ---- UI ----
+## ---- UI ----
 ui <- fluidPage(
   titlePanel("Arktisk havis – minimum (extent) per år (1979–2024)"),
 
@@ -98,7 +98,7 @@ ui <- fluidPage(
     mainPanel(
       tabsetPanel(
         tabPanel(
-          "Data",
+          "Visualisering",
           fluidRow(
             column(
               4,
@@ -112,9 +112,7 @@ ui <- fluidPage(
               plotOutput("p", height = 360)
             )
           ),
-          h4("År-for-år-tabell (filtrert)"),
-          tableOutput("tbl")
-        ),
+          ),
 
         tabPanel(
           "Forklaring",
@@ -167,7 +165,11 @@ ui <- fluidPage(
 
 
 
-          )
+        ),
+        tabPanel ("Data",
+                  h4("Tabell: År for år (filtrert)"),
+                  tableOutput("tbl")
+                  )
       )
     )
 
