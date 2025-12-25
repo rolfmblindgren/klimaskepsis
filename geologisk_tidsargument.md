@@ -2,7 +2,7 @@
 
 ### 1. «250 millioner år» er irrelevant målestokk
 
-Ja – global middeltemperatur har ofte ligget **2–10 °C høyere** enn i dag.
+Ja – global middeltemperatur har ofte ligget _2–10 °C høyere_ enn i dag.
 
 Men:
 - kontinentene lå annerledes  
@@ -10,10 +10,10 @@ Men:
 - CO₂-nivåene var annerledes  
 - biosfæren var fundamentalt annerledes  
 
-Dette sier **ingenting** om hva som er uproblematisk for dagens sivilisasjon.
+Dette sier _ingenting_ om hva som er uproblematisk for dagens sivilisasjon.
 
 Å bruke jordens dype geologiske fortid som beroligelse for nåtidige samfunn
-er en **kategorifeil**.
+er en _kategorifeil_.
 
 ---
 
@@ -24,7 +24,7 @@ Det avgjørende er ikke *hva temperaturen var*, men:
 - hva som er bygget opp rundt dagens klima  
 
 Byer, havner, jordbruk, grenser, infrastruktur og økosystemer er
-kalibrert for **holocen**, ikke for perm eller kritt.
+kalibrert for _holocen_, ikke for perm eller kritt.
 
 ---
 
@@ -37,7 +37,7 @@ Dagens oppvarming skjer over:
 - århundrer  
 - delvis tiår  
 
-Dette er **ikke sammenlignbart**.
+Dette er _ikke sammenlignbart_.
 
 ---
 
@@ -49,5 +49,5 @@ Issmelting innebærer:
 - økt militær tilstedeværelse  
 - stormaktsrivalisering  
 
-Dette er grunnen til at Grønland er geopolitisk interessant **nå**,
+Dette er grunnen til at Grønland er geopolitisk interessant _nå_,
 ikke i mesozoikum.
