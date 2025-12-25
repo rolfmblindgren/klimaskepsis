@@ -1,8 +1,8 @@
-# app.R
+## app.R
 library(shiny)
 library(ggplot2)
 
-# ---- data (CSV innebygd) ----
+## ---- data (CSV innebygd) ----
 csv_txt <- "
 year,min_extent_million_km2,min_date
 1979,6.895,1979-09-21
@@ -58,12 +58,12 @@ df$min_date <- as.Date(df$min_date)
 df <- df[order(df$year), ]
 
 roll_mean <- function(x, k = 5) {
-  # sentrert rullerende snitt, enkel og robust
+  ## sentrert rullerende snitt, enkel og robust
   if (k <= 1) return(x)
   stats::filter(x, rep(1 / k, k), sides = 2)
 }
 
-# ---- UI ----
+                                        ## ---- UI ----
 ui <- fluidPage(
   titlePanel("Arktisk havis – minimum (extent) per år (1979–2024)"),
 
@@ -94,31 +94,84 @@ ui <- fluidPage(
       helpText("Enhet: millioner km². Merk: extent ≠ area.")
     ),
 
-    mainPanel(
-      fluidRow(
-        column(
-          4,
-          wellPanel(
-            h4("Valgt år"),
-            verbatimTextOutput("year_card")
-          )
-        ),
-        column(
-          8,
-          plotOutput("p", height = 360)
-        )
-      ),
 
-      h4("År-for-år-tabell (filtrert)"),
-      tableOutput("tbl")
+    mainPanel(
+      tabsetPanel(
+        tabPanel(
+          "Data",
+          fluidRow(
+            column(
+              4,
+              wellPanel(
+                h4("Valgt år"),
+                verbatimTextOutput("year_card")
+              )
+            ),
+            column(
+              8,
+              plotOutput("p", height = 360)
+            )
+          ),
+          h4("År-for-år-tabell (filtrert)"),
+          tableOutput("tbl")
+        ),
+
+        tabPanel(
+          "Forklaring",
+          h3("Hvordan lese grafen"),
+
+          p(
+            "Grafen viser arktisk havis ved årlig minimum (vanligvis i september), ",
+            "målt som utbredelse (extent). Dette er arealet der minst 15 % av ",
+            "havoverflaten er dekket av is."
+          ),
+
+          h4("År-for-år-data"),
+          p(
+            "Punktene og linjen uten glatting viser de faktiske målingene hvert år. ",
+            "Variasjon fra år til år skyldes blant annet værmønstre, vind og havstrømmer."
+          ),
+
+          h4("LOESS (lokal regresjon)"),
+          p(
+            "LOESS er en lokal regresjonsmetode som tilpasser en glatt kurve ved å bruke ",
+            "nærliggende datapunkter. Metoden er god for å synliggjøre langsiktige ",
+            "trender uten å anta at utviklingen er lineær."
+          ),
+          p(
+            "LOESS er beskrivende, ikke forklarende: kurven skal leses som et ",
+            "sammendrag av mønsteret i dataene, ikke som en fysisk modell."
+          ),
+
+          h4("Rullerende gjennomsnitt"),
+          p(
+            "Et rullerende gjennomsnitt beregner gjennomsnittet av et fast antall ",
+            "påfølgende år (for eksempel 5 år) og flytter vinduet ett år om gangen."
+          ),
+          p(
+            "Dette demper kortsiktig støy og gjør det lettere å se utviklingen over tid, ",
+            "men gir mindre vekt til ytterpunktene i starten og slutten av serien."
+          ),
+
+          h4("Viktig å merke seg"),
+          tags$ul(
+                 tags$li("Glatting endrer ikke dataene, bare hvordan de vises."),
+                 tags$li("Kortere tidsvinduer kan gi inntrykk av «pause» i trender."),
+                 tags$li("Langsiktige vurderinger krever flere tiår med data.")
+               )
+        )
+      )
     )
+
   )
 )
 
-# ---- Server ----
+## ---- Server ----
 server <- function(input, output, session) {
 
-  # Oppdater år-velgeren så den følger filteret (men behold valgt hvis mulig)
+  ## Oppdater år-velgeren så den følger filteret (men behold valgt
+  ## hvis mulig)
+
   observeEvent(input$year_range, {
     yrs <- df$year[df$year >= input$year_range[1] & df$year <= input$year_range[2]]
     current <- isolate(input$pick_year)
@@ -158,7 +211,7 @@ server <- function(input, output, session) {
       base <- base +
         geom_line(data = d2, aes(x = year, y = roll), linewidth = 1)
     }
-    # marker valgt år
+    ## marker valgt år
     y <- as.integer(input$pick_year)
     row <- d[d$year == y, ]
     if (nrow(row) == 1) {
