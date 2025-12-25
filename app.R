@@ -161,7 +161,7 @@ ui <- fluidPage(
                )
         ),
         tabPanel (
-          "Jammen hva med for to hundre og femti millioner år siden da?",
+          "250 millioner år siden?",
           includeMarkdown("geologisk_tidsargument.md")
 
 
