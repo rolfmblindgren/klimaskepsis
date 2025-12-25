@@ -91,7 +91,12 @@ ui <- fluidPage(
         choices = df$year, selected = max(df$year)
       ),
 
-      helpText("Enhet: millioner km². Merk: extent ≠ area.")
+      helpText("Enhet: millioner km². Merk: extent ≠ area."),
+
+      hr(),
+      h4("Valgt år"),
+      verbatimTextOutput("year_card")
+
     ),
 
 
@@ -100,17 +105,8 @@ ui <- fluidPage(
         tabPanel(
           "Visualisering",
           fluidRow(
-            column(
-              4,
-              wellPanel(
-                h4("Valgt år"),
-                verbatimTextOutput("year_card")
-              )
-            ),
-            column(
-              8,
-              plotOutput("p", height = 360)
-            )
+            plotOutput("p", height = 360)
+
           ),
           ),
 
