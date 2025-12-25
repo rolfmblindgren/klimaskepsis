@@ -233,7 +233,12 @@ server <- function(input, output, session) {
 
   output$tbl <- renderTable({
     d <- dff()
-    d[, c("year", "min_extent_million_km2", "min_date")]
+    d$min_date <- format(d$min_date, "%Y-%m-%d")
+
+    d <- d[, c("year", "min_extent_million_km2", "min_date")]
+    colnames(d) <- c("År", "Minimum utbredelse", "Dato for minimum")
+
+    d
   }, striped = TRUE, digits = 3)
 }
 
