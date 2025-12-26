@@ -76,13 +76,13 @@ ui <- fluidPage(
                    content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024, med forklaringer og data."),
          tags$meta(property = "og:type", content = "website"),
          tags$meta(property = "og:url", content = "https://shiny.grendel.no/klimaskepsis/"),
-         tags$meta(property = "og:image", content = "https://shiny.grendel.no/klimaskepsis/www/og.png"),
+         tags$meta(property = "og:image", content = "https://shiny.grendel.no/klimaskepsis/og.png"),
 
          tags$meta(name = "twitter:card", content = "summary_large_image"),
          tags$meta(name = "twitter:title", content = "Klimaskepsis i data – Grendel"),
          tags$meta(name = "twitter:description",
                    content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024."),
-         tags$meta(name = "twitter:image", content = "https://shiny.grendel.no/klimaskepsis/www/og.png")
+         tags$meta(name = "twitter:image", content = "https://shiny.grendel.no/klimaskepsis/og.png")
        ),
 
   tags$section(
