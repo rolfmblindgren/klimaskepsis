@@ -68,10 +68,24 @@ ui <- fluidPage(
 
   tags$head(
 
+         tags$link(rel="canonical",
+                   href="https://shiny.grendel.no/klimaskepsis/"),
+
+         tags$meta(name="twitter:url",
+                   content="https://shiny.grendel.no/klimaskepsis/"),
+
+         tags$meta(property = "og:site_name",
+                   content = "Grendel"),
+         tags$meta(property = "og:locale",
+                   content = "nb_NO"),
+         tags$meta(property = "og:image:width",
+                   content = "1200"),
+         tags$meta(property = "og:image:height",
+                   content = "630"),
          tags$meta(name = "description",
                    content = "Interaktiv analyse av temperatur, CO₂ og klimadata 1979–2024."),
          tags$meta(name = "robots", content = "index,follow"),
-         tags$meta(property = "og:title", content = "Klimaskepsis i data – Grendel"),
+         tags$meta(property = "og:title", content = "Arktisk havis – minimum (extent) per år (1979–2024)"),
          tags$meta(property = "og:description",
                    content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024, med forklaringer og data."),
          tags$meta(property = "og:type", content = "website"),
@@ -79,18 +93,18 @@ ui <- fluidPage(
          tags$meta(property = "og:image", content = "https://shiny.grendel.no/klimaskepsis/og.png"),
 
          tags$meta(name = "twitter:card", content = "summary_large_image"),
-         tags$meta(name = "twitter:title", content = "Klimaskepsis i data – Grendel"),
+         tags$meta(name = "twitter:title", content = "Arktisk havis – minimum (extent) per år (1979–2024)"),
          tags$meta(name = "twitter:description",
                    content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024."),
          tags$meta(name = "twitter:image", content = "https://shiny.grendel.no/klimaskepsis/og.png")
        ),
 
   tags$section(
-         tags$h1("Klimaskepsis i data – Grendel"),
+         tags$h1("Arktisk havis – minimum (extent) per år (1979–2024)"),
          tags$p("Denne appen lar deg utforske klimadata i et langt tidsperspektiv. Foreløpig: arktisk havis (minimum) 1979–2024.")
        ),
 
-  titlePanel("Arktisk havis – minimum (extent) per år (1979–2024)"),
+
 
   sidebarLayout(
     sidebarPanel(
