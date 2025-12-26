@@ -67,13 +67,26 @@ roll_mean <- function(x, k = 5) {
 ui <- fluidPage(
 
   tags$head(
+
          tags$meta(name = "description",
                    content = "Interaktiv analyse av temperatur, CO₂ og klimadata 1979–2024."),
-         tags$meta(name = "robots", content = "index,follow")
+         tags$meta(name = "robots", content = "index,follow"),
+         tags$meta(property = "og:title", content = "Klimaskepsis i data – Grendel"),
+         tags$meta(property = "og:description",
+                   content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024, med forklaringer og data."),
+         tags$meta(property = "og:type", content = "website"),
+         tags$meta(property = "og:url", content = "https://shiny.grendel.no/klimaskepsis/"),
+         tags$meta(property = "og:image", content = "https://shiny.grendel.no/klimaskepsis/www/og.png"),
+
+         tags$meta(name = "twitter:card", content = "summary_large_image"),
+         tags$meta(name = "twitter:title", content = "Klimaskepsis i data – Grendel"),
+         tags$meta(name = "twitter:description",
+                   content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024."),
+         tags$meta(name = "twitter:image", content = "https://shiny.grendel.no/klimaskepsis/www/og.png")
        ),
 
   tags$section(
-         tags$h1("Klimaskepsis i data"),
+         tags$h1("Klimaskepsis i data – Grendel"),
          tags$p("Denne appen lar deg utforske klimadata i et langt tidsperspektiv. Foreløpig: arktisk havis (minimum) 1979–2024.")
        ),
 
