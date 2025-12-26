@@ -65,6 +65,19 @@ roll_mean <- function(x, k = 5) {
 
 ## ---- UI ----
 ui <- fluidPage(
+
+  tags$head(
+         tags$title("Klimaskepsis i data – Grendel"),
+         tags$meta(name = "description",
+                   content = "Interaktiv analyse av temperatur, CO₂ og klimadata 1979–2024."),
+         tags$meta(name = "robots", content = "index,follow")
+       ),
+
+  tags$section(
+         tags$h1("Klimaskepsis i data"),
+         tags$p("Denne appen lar deg utforske endringen i temperatur, CO₂ og klimaendringer 1979-2024. ")
+       ),
+
   titlePanel("Arktisk havis – minimum (extent) per år (1979–2024)"),
 
   sidebarLayout(
@@ -240,3 +253,4 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+'<
