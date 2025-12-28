@@ -1,3 +1,18 @@
+## Hva er en klimaskeptiker?
+
+Med «klimaskeptiker» mener jeg vanligvis ikke folk som er skeptiske
+til dommedagsretorikk, eller som påpeker at mennesker har blitt
+flinkere til å håndtere vær og klima.
+
+Jeg mener folk som er skeptiske til selve kunnskapsgrunnlaget:
+
+- at global oppvarming skjer
+- at den i hovedsak er menneskeskapt
+- og at langsiktige trender kan skilles fra kortsiktig vær
+
+Det er fullt mulig å være skeptisk til undergangsfortellinger uten å
+være klimaskeptiker i den forstand.
+
 ## «Jammen hva med for 250 millioner år siden da?»
 
 ### «250 millioner år» er irrelevant målestokk

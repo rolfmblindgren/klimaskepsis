@@ -67,7 +67,7 @@ roll_mean <- function(x, k = 5) {
 ui <- fluidPage(
 
   tags$head(
-
+         tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
          tags$link(rel="canonical",
                    href="https://shiny.grendel.no/klimaskepsis/"),
 
@@ -194,7 +194,7 @@ ui <- fluidPage(
                )
         ),
         tabPanel (
-          "250 millioner år siden?",
+          "Om klimaskepsis",
           includeMarkdown("geologisk_tidsargument.md")
 
 
