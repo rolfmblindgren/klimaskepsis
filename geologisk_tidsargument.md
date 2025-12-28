@@ -1,6 +1,6 @@
 ## «Jammen hva med for 250 millioner år siden da?»
 
-### 1. «250 millioner år» er irrelevant målestokk
+### «250 millioner år» er irrelevant målestokk
 
 Ja – global middeltemperatur har ofte ligget _2–10 °C høyere_ enn i dag.
 
@@ -17,7 +17,7 @@ er en _kategorifeil_.
 
 ---
 
-### 2. klima handler ikke om «har det vært varmt før»
+### Klima handler ikke om «har det vært varmt før»
 
 Det avgjørende er ikke *hva temperaturen var*, men:
 - hvor raskt den endrer seg  
@@ -28,7 +28,7 @@ kalibrert for _holocen_, ikke for perm eller kritt.
 
 ---
 
-### 3. tempoet er det nye her
+### Tempoet er det nye her
 
 Naturlige temperaturendringer i geologisk fortid skjedde over:
 - titusener til millioner av år  
@@ -41,7 +41,7 @@ Dette er _ikke sammenlignbart_.
 
 ---
 
-### 4. Arktis er et sikkerhetspolitisk, ikke bare klimamessig spørsmål
+### Arktis er et sikkerhetspolitisk, ikke bare klimamessig spørsmål
 
 Issmelting innebærer:
 - nye sjøruter  
