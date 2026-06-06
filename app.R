@@ -1,6 +1,9 @@
 ## app.R
 library(shiny)
 library(ggplot2)
+library(yaml)
+
+app_meta <- yaml::read_yaml("meta.yaml")
 
 ## ---- data (CSV innebygd) ----
 csv_txt <- "
@@ -65,39 +68,9 @@ roll_mean <- function(x, k = 5) {
 
 ## ---- UI ----
 ui <- fluidPage(
-
-  tags$head(
-         tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
-         tags$link(rel="canonical",
-                   href="https://shiny.grendel.no/klimaskepsis/"),
-
-         tags$meta(name="twitter:url",
-                   content="https://shiny.grendel.no/klimaskepsis/"),
-
-         tags$meta(property = "og:site_name",
-                   content = "Grendel"),
-         tags$meta(property = "og:locale",
-                   content = "nb_NO"),
-         tags$meta(property = "og:image:width",
-                   content = "1200"),
-         tags$meta(property = "og:image:height",
-                   content = "630"),
-         tags$meta(name = "description",
-                   content = "Interaktiv analyse av temperatur, CO₂ og klimadata 1979–2024."),
-         tags$meta(name = "robots", content = "index,follow"),
-         tags$meta(property = "og:title", content = "Arktisk havis – minimum (extent) per år (1979–2024)"),
-         tags$meta(property = "og:description",
-                   content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024, med forklaringer og data."),
-         tags$meta(property = "og:type", content = "website"),
-         tags$meta(property = "og:url", content = "https://shiny.grendel.no/klimaskepsis/"),
-         tags$meta(property = "og:image", content = "https://shiny.grendel.no/klimaskepsis/og.png"),
-
-         tags$meta(name = "twitter:card", content = "summary_large_image"),
-         tags$meta(name = "twitter:title", content = "Arktisk havis – minimum (extent) per år (1979–2024)"),
-         tags$meta(name = "twitter:description",
-                   content = "Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024."),
-         tags$meta(name = "twitter:image", content = "https://shiny.grendel.no/klimaskepsis/og.png")
-       ),
+  grendelshiny::grendelshiny_css(),
+  grendelshiny::grendelshiny_js(),
+  shinyseo::social_meta(app_meta),
 
   tags$section(
          tags$h1("Arktisk havis – minimum (extent) per år (1979–2024)"),
@@ -107,7 +80,7 @@ ui <- fluidPage(
 
 
   sidebarLayout(
-    sidebarPanel(
+    sidebarPanel(class = "sidebar-card",
       sliderInput(
         "year_range", "År (filter):",
         min = min(df$year), max = max(df$year),
@@ -139,7 +112,7 @@ ui <- fluidPage(
     ),
 
 
-    mainPanel(
+    mainPanel(class = "main-card",
       tabsetPanel(
         tabPanel(
           "Visualisering",

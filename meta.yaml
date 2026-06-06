@@ -1,0 +1,34 @@
+title: "Arktisk havis – minimum (extent) per år (1979–2024)"
+description: >
+  Interaktiv utforsking av arktisk havis (minimum extent) 1979–2024, med
+  forklaringer, glatting og data. Et verktøy for å forstå klimatrender
+  og møte klimaskeptiske argumenter med data.
+url: "https://shiny.grendel.no/klimaskepsis"
+image: "https://shiny.grendel.no/klimaskepsis/og.png"
+image_alt: "Graf over arktisk havisutbredelse 1979–2024"
+image_width: 1200
+image_height: 630
+image_type: "image/png"
+site_name: "Grendel"
+locale: "nb_NO"
+
+favicon: "/klimaskepsis/favicon.svg"
+favicon_type: "image/svg+xml"
+theme_color: "#0f2421"
+
+schema_type: "WebApplication"
+application_category: "EducationApplication"
+operating_system: "Any"
+is_accessible_for_free: true
+
+author_name: "Grendel"
+author_type: "Organization"
+publisher_name: "Grendel"
+publisher_type: "Organization"
+
+twitter_card: "summary_large_image"
+bing_site_verification: "FC104B5963EC28F7C5766C79E6AEBE9D"
+
+# Local Variables:
+# mode: yaml
+# End:
