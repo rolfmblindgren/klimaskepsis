@@ -14,6 +14,7 @@ locale: "nb_NO"
 
 favicon: "/klimaskepsis/favicon.svg"
 favicon_type: "image/svg+xml"
+favicon_png: "/klimaskepsis/favicon-32.png"
 theme_color: "#0f2421"
 
 schema_type: "WebApplication"
