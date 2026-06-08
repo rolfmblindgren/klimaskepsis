@@ -4,11 +4,11 @@ description: >
   forklaringer, glatting og data. Et verktøy for å forstå klimatrender
   og møte klimaskeptiske argumenter med data.
 url: "https://shiny.grendel.no/klimaskepsis"
-image: "https://shiny.grendel.no/klimaskepsis/og.png"
+image: "https://shiny.grendel.no/klimaskepsis/og.svg"
 image_alt: "Graf over arktisk havisutbredelse 1979–2024"
 image_width: 1200
 image_height: 630
-image_type: "image/png"
+image_type: "image/svg+xml"
 site_name: "Grendel"
 locale: "nb_NO"
 
